@@ -1,0 +1,26 @@
+{
+  "name": "hapi-setup-helpers",
+  "version": "0.1.0",
+  "description": "hapi helpers for app setup",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/defel/hapi-setup-helpers.git"
+  },
+  "keywords": [
+    "hapi",
+    "plugin"
+  ],
+  "author": "defel <dem_ist@nuerfuerspam.de>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/defel/hapi-setup-helpers/issues"
+  },
+  "homepage": "https://github.com/defel/hapi-setup-helpers",
+  "dependencies": {
+    "chalk": "^0.5.1"
+  }
+}
