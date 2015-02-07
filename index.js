@@ -92,7 +92,6 @@ module.exports = function(server) {
           }
           break;
         case 'handler':
-          console.log(appRootPath);
           var path = appRootPath + '/src/handlers/' + routeEntry[routeTableMap.ARG] + '.js';
           route.config.handler = require(path);
 
