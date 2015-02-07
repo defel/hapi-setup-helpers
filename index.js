@@ -1,4 +1,6 @@
-var chalk = require('chalk');
+var 
+  chalk = require('chalk'),
+  appRootPath = require('app-root-path');
 
 module.exports = function(server) {
 
@@ -90,7 +92,8 @@ module.exports = function(server) {
           }
           break;
         case 'handler':
-          var path = __dirname + '/../src/handlers/' + routeEntry[routeTableMap.ARG] + '.js';
+          console.log(appRootPath);
+          var path = appRootPath + '/src/handlers/' + routeEntry[routeTableMap.ARG] + '.js';
           route.config.handler = require(path);
 
           break;
@@ -99,7 +102,7 @@ module.exports = function(server) {
             argParts = routeEntry[routeTableMap.ARG].split('.'),
             model = argParts[0],
             func = argParts[1],
-            path = __dirname + '/../src/models/' + model.toLowerCase() + '.js',
+            path = __dirname + '/../../src/models/' + model.toLowerCase() + '.js',
             Model = require(path);
 
           route.config.handler = Model(server)[func];

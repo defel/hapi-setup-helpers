@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/defel/hapi-setup-helpers",
   "dependencies": {
+    "app-root-path": "^1.0.0",
     "chalk": "^0.5.1"
   }
 }
