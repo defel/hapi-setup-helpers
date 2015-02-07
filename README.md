@@ -1,10 +1,22 @@
 hapi-setup-helpers
 ==================
 
-hapi helpers for app setup
+hapi helpers for app setup. work with hapi 8.x
+
+installation
+============
+
+`npm install --save hapi-setup-helpers`
+
+usage
+=====
+
+```js
+var helper = require('hapi-setup-helpers')(server);
+```
 
 
-pluginLoader()
+loadPlugin()
 --------------
 
 a helper method to allow loading plugins in application start synchronous with `async.series` for example.
@@ -14,7 +26,7 @@ Usage:
 ```js
 async.series([
   // load hapi-auth-cookie plugin
-  helper.pluginLoader(server, 'hapi-auth-cookie', {}, function(next) {
+  helper.loadPlugin(server, 'hapi-auth-cookie', {}, function(next) {
     server.auth.strategy('session', 'cookie', {
       password: 'i wear no pants',
       cookie: 'tbsid',
