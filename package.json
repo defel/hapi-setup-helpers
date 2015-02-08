@@ -1,6 +1,6 @@
 {
   "name": "hapi-setup-helpers",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "hapi helpers for app setup",
   "main": "index.js",
   "scripts": {
