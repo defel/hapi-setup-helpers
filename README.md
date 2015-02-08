@@ -55,6 +55,11 @@ One line has the following fields:
 - Method(s)
 - Path
 - Handler
+  - file
+  - directory
+  - handler
+  - toothache
+  - bedwetter
 - Target for handler
 - Is this route protected?
 

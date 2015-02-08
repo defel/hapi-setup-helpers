@@ -6,10 +6,12 @@ module.exports = function(server) {
 
   function loadPlugin(name, opts, doneHandler) {
     return function(next) {
-      server.register({
-        register: require(name), 
-        options: opts
-      }, exports.pluginErrorAsyncCallback(name, doneHandler, next)
+      server.register(
+        {
+          register: require(name), 
+          options: opts
+        },
+        pluginErrorAsyncCallback(name, doneHandler, next)
       );
     };
   }
@@ -106,6 +108,11 @@ module.exports = function(server) {
 
           route.config.handler = Model(server)[func];
 
+          break;
+        case 'bedwetter':
+          route.config.handler = {
+            bedwetter: routeEntry[routeTableMap.ARG]
+          };
           break;
         default:
           throw new Error('unknown backend: ' + routeEntry[routeTableMap.BACKEND]);
